@@ -30,24 +30,18 @@
             <p style="margin:auto; margin-left: 28px; color:#DE8E1F">Home</p>
           </ion-card-content>
         </ion-card>
-        <ion-card class="ionCard" [routerLink]="['/users']">
+        <ion-card class="ionCard" (click)="onUsersClick()">
           <ion-card-content style="display: inline-flex;">
             <img class="iconOption" src="../assets/user_icon.png"/>
             <p style="margin:auto; margin-left: 28px;">Users</p>
           </ion-card-content>
         </ion-card> 
-        <ion-card class="ionCard">
+        <ion-card class="ionCard" (click)="onLogout()">
           <ion-card-content style="display: inline-flex;">
-            <img class="iconOption" src="../assets/camera_icon.png"/>
-            <p style="margin:auto; margin-left: 28px;">Photos</p>
+            <img class="iconOption" src="../assets/logout.png"/>
+            <p style="margin:auto; margin-left: 28px;">Log out</p>
           </ion-card-content>
-        </ion-card> 
-        <ion-card class="ionCard">
-          <ion-card-content style="display: inline-flex;">
-            <img class="iconOption" src="../assets/bookmark_icon.png"/>
-            <p style="margin:auto; margin-left: 28px;">Bookmarked</p>
-          </ion-card-content>
-        </ion-card> 
+        </ion-card>  
       </div>
       
     </ion-content>

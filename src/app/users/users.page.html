@@ -24,7 +24,7 @@
         <p id="email">emailexample@gmail.com</p>
       </div>
       <div id="menuButtons">
-        <ion-card class="ionCard" [routerLink]="['/home']">
+        <ion-card class="ionCard" (click)="onHomeClick()" redire>
           <ion-card-content style="display: inline-flex;">
             <img class="iconOption" src="../assets/home_icon.png"/>
             <p style="margin:auto; margin-left: 28px;">Home</p>
@@ -36,16 +36,10 @@
             <p style="margin:auto; margin-left: 28px; color:#DE8E1F">Users</p>
           </ion-card-content>
         </ion-card> 
-        <ion-card class="ionCard">
+        <ion-card class="ionCard" (click)="onLogout()">
           <ion-card-content style="display: inline-flex;">
-            <img class="iconOption" src="../assets/camera_icon.png"/>
-            <p style="margin:auto; margin-left: 28px;">Photos</p>
-          </ion-card-content>
-        </ion-card> 
-        <ion-card class="ionCard">
-          <ion-card-content style="display: inline-flex;">
-            <img class="iconOption" src="../assets/bookmark_icon.png"/>
-            <p style="margin:auto; margin-left: 28px;">Bookmarked</p>
+            <img class="iconOption" src="../assets/logout.png"/>
+            <p style="margin:auto; margin-left: 28px;">Log out</p>
           </ion-card-content>
         </ion-card> 
       </div>

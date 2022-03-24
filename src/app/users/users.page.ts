@@ -72,4 +72,12 @@ export class UsersPage implements OnInit {
     this.router.navigate(['details'], navigationExtras);
   }
 
+  onHomeClick(){
+    this.router.navigateByUrl('/home', { replaceUrl: true })
+  }
+
+  onLogout(){
+    this.router.navigateByUrl('/login', { replaceUrl: true })
+  }
+
 }
