@@ -1,0 +1,39 @@
+#avatar {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+  }
+  
+  #imageBackground {
+    position: absolute;
+    top: 0%;
+  }
+  
+  #email {
+    position: absolute;
+    top: 18%;
+    left: 5%; 
+    color: white;
+    font-size: 14px;
+  }
+  
+  #containerItems {
+    position: relative;
+  }
+  
+  #menuButtons {
+    position: absolute;
+    top: 28%;
+    width: 100%;
+  }
+  
+  .iconOption {
+    height: 20px;
+  }
+  
+  .ionCard {
+    box-shadow: none !important; 
+    margin: 0px !important;
+  }

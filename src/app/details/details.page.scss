@@ -1,0 +1,22 @@
+#content {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#avatar {
+    margin-inline: auto;
+    height: 220px;
+    width: 220px;
+    margin-bottom: 40px;
+    border: solid rgb(44, 44, 44) 2px;
+    margin-top: 40px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+

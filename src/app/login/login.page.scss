@@ -1,0 +1,44 @@
+#page {
+    
+}
+#container {
+    background-color: #003049;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#title {
+    position: relative;
+    font-size: 48px;
+    margin: 0;
+    text-align: center;
+    color: #fcfcfc;
+    margin-bottom: 100px;
+}
+.input {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-width: 5px;
+    border-color: black;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 40px;
+    height: 60px;
+}
+
+.button {
+    text-transform: none;
+    background: #003049!important;
+    --border-radius:1px;
+    --background:#C46500;
+    position: absolute;
+    left: 40%;
+    right: 40%;
+}
+
+.btnContainer{
+    background-color: #C46500;
+}
