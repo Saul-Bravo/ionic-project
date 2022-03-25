@@ -9,11 +9,11 @@
       </ion-button>
     </ion-buttons>
 
-    <ion-title>Home</ion-title>
+    <ion-title>Report</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content>
   <ion-menu side="start" menuId="first" contentId="main">
     <ion-content>
       <div id="userHeader">
@@ -26,14 +26,14 @@
       <div id="menuButtons">
         <ion-card class="ionCard">
           <ion-card-content style="display: inline-flex;">
-            <img class="iconOption" src="../assets/home_icon.png"/>
-            <p style="margin:auto; margin-left: 28px; color:#DE8E1F">Home</p>
+            <img class="iconOption" src="../assets/report.png"/>
+            <p style="margin:auto; margin-left: 28px; color:#DE8E1F">Report</p>
           </ion-card-content>
         </ion-card>
         <ion-card class="ionCard" (click)="onUsersClick()">
           <ion-card-content style="display: inline-flex;">
             <img class="iconOption" src="../assets/user_icon.png"/>
-            <p style="margin:auto; margin-left: 28px;">Users</p>
+            <p style="margin:auto; margin-left: 28px;">Admins</p>
           </ion-card-content>
         </ion-card> 
         <ion-card class="ionCard" (click)="onLogout()">
@@ -49,7 +49,97 @@
   </ion-menu>
   <div class="ion-page" id="main">
     <ion-content class="ion-padding" color="background">
-      
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card style="margin: auto;">
+              <ion-card-content>
+                <canvas baseChart 
+                  height="500"
+                  [data]="pieChartData" 
+                  [labels]="pieChartLabels" 
+                  [chartType]="pieChartType"
+                  [options]="pieChartOptions"
+                  [legend]="pieChartLegend"
+                  [colors]="pieChartColors">
+                </canvas>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card class="smallCard">
+              <ion-card-content   style="padding-inline: 2px;">
+                <ion-item style="margin-left: 0;">
+                  <ion-avatar style="height: 40px; width: 40px;" slot="start">
+                    <img src="../assets/online.png">
+                  </ion-avatar>
+                  <h2 style="color:rgb(94, 93, 93)">Online<br>Users:<br><i>2500</i></h2>
+                </ion-item>
+              </ion-card-content>
+            </ion-card>
+            <ion-card class="smallCard" style="margin-top: 15%;">
+              <ion-card-content   style="padding-inline: 2px;">
+                <ion-item style="margin-left: 0;">
+                  <ion-avatar style="height: 40px; width: 40px;" slot="start">
+                    <img src="../assets/offline.png">
+                  </ion-avatar>
+                  <h2 style="color:rgb(94, 93, 93)">Offline<br>Users:<br><i>278</i></h2>
+                </ion-item>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-card>
+        <ion-card-content>
+          <canvas baseChart
+            height="300"
+            [datasets]="chartData" 
+            [labels]="chartLabels" 
+            [options]="chartOptions" 
+            [legend]="showLegend" 
+            [chartType]="chartType">
+          </canvas>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+
+        <ion-card-content>
+          <ion-title>
+            Most Rated Users <br>of the Week
+          </ion-title>
+          <ion-list>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img src="https://e7.pngegg.com/pngimages/348/800/png-clipart-man-wearing-blue-shirt-illustration-computer-icons-avatar-user-login-avatar-blue-child.png">
+              </ion-avatar>
+              <ion-label>
+                <h2 style="color:rgb(94, 93, 93)">Armando Torres</h2> <i style="color:rgb(94, 93, 93)"> Likes: 13587</i>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+          <ion-list>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img src="https://cdn.eldeforma.com/wp-content/uploads/2020/03/willson.jpg">
+              </ion-avatar>
+              <ion-label>
+                <h2 style="color:rgb(94, 93, 93)">Jhon Willson</h2> <i style="color:rgb(94, 93, 93)"> Likes: 10256</i>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+          <ion-list>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img src="https://www.elsoldemexico.com.mx/doble-via/n0idiu-alfredo-adame/ALTERNATES/LANDSCAPE_1140/Alfredo%20Adame">
+              </ion-avatar>
+              <ion-label>
+                <h2 style="color:rgb(94, 93, 93)">Alfredo Adame</h2> <i style="color:rgb(94, 93, 93)"> Likes: 8745</i>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
     </ion-content>
   </div>
 </ion-content>

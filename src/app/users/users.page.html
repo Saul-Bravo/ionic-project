@@ -9,7 +9,7 @@
       </ion-button>
     </ion-buttons>
 
-    <ion-title>Users</ion-title>
+    <ion-title>Admins List</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -26,14 +26,14 @@
       <div id="menuButtons">
         <ion-card class="ionCard" (click)="onHomeClick()" redire>
           <ion-card-content style="display: inline-flex;">
-            <img class="iconOption" src="../assets/home_icon.png"/>
-            <p style="margin:auto; margin-left: 28px;">Home</p>
+            <img class="iconOption" src="../assets/report.png"/>
+            <p style="margin:auto; margin-left: 28px;">Report</p>
           </ion-card-content>
         </ion-card>
         <ion-card class="ionCard">
           <ion-card-content style="display: inline-flex;">
             <img class="iconOption" src="../assets/user_icon.png"/>
-            <p style="margin:auto; margin-left: 28px; color:#DE8E1F">Users</p>
+            <p style="margin:auto; margin-left: 28px; color:#DE8E1F">Admins</p>
           </ion-card-content>
         </ion-card> 
         <ion-card class="ionCard" (click)="onLogout()">
@@ -49,7 +49,7 @@
   </ion-menu>
   <div class="ion-page" id="main">
     <ion-content class="ion-padding" color="background">
-      <h1 style="color: #fcfcfc; margin-left: 15px;">Users</h1>
+      <h1 style="color: #fcfcfc; margin-left: 15px;">Admins</h1>
       <ion-list>
         <ion-item *ngFor="let user of userObjects" (click)="openUserDetails(user.id)">
           <ion-avatar slot="start">
